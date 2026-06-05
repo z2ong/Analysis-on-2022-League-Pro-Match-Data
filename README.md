@@ -8,7 +8,7 @@ The dataset I am using for this project is 2022 esports match data from the webs
 I required very little cleaning for my dataset. I mostly focused on filtering the original dataframe for the information that I desired to work with. Since I wanted to focus specifically on tier 1 teams, I filtered the dataframe to only include data from the leagues LCK, LPL, CBLOL, LCS, and LEC. From there, I also only wanted the majority of game stats and overall team stats, so I filtered the dataframe further to only include team data as well. Beyond this, I filtered it down to the columns I wanted to analyze that I thought would answer my research question of predicting game length and if different leagues had differing game lengths based on regional metas, dependent on 15-minute stats.
 
 <br><br>
-
+### Slightly Filtered DataFrame
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength |   team kpm | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|-----------:|:-------|
 |            nan |          nan |          nan | LPL      |         nan |          nan |         1365 |     0.5714 | Blue   |
@@ -22,7 +22,7 @@ I required very little cleaning for my dataset. I mostly focused on filtering th
 As you can see, there is still a lot more data missing, so I began searching for what I could possibly do to impute the missing data. As I verified it, I found that all of the missing data was only associated with the league LPL, meaning that the LPL was the only league that contained missing data in this data frame. Because of how much missingness there was across rows, I decided to drop rows that were from the LPL league entirely. 
 
 <br><br>
-
+### Dropped LPL DataFrame
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|
 |           4757 |         1540 |            1 | LCK      |           4 |            1 |         2195 | Blue   |
@@ -93,7 +93,7 @@ I did the same thing above, by generating a histogram, but this time overlaying 
 For this scatterplot, I wanted to note whether the trends with gamelength were linear or non-linear. This led me to choose a nonlinear model because of the data's shape.
 
 <br><br>
-
+### Pivot Table Comparing The Relationship of golddiffat15 and gamelength Across Different Leagues
 | league   |   gamelength |   golddiffat15 |
 |:---------|-------------:|---------------:|
 | CBLOL    |      1974.09 |       41.572   |
