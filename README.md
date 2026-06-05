@@ -31,7 +31,12 @@ As you can see, there is still a lot more data missing, so I began searching for
 
 The resulting data frame above has no missing values; thus, my cleaning has been mostly finished. Later, I also realized that the diff stats every other row were duplicates of each other in magnitude, so as not to have such redundant values in the model and overinflate it with these particular values, I decided to filter only to one side per match since the differentials are equal in magnitude.
 
-
+<iframe
+  src="assets/golddiff15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Assessment of Missingness
 
