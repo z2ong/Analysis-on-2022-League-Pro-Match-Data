@@ -53,7 +53,7 @@ The resulting data frame above has no missing values; thus, my cleaning has been
 ></iframe>
 
 <iframe
-  src="assets/gamelength-across-leagues-histogram.html.html"
+  src="assets/gamelength-across-leagues-histogram.html"
   width="800"
   height="600"
   frameborder="0"
