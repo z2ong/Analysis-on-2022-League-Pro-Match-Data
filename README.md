@@ -1,4 +1,4 @@
-#Analysis On 2022 League Pro Match Data
+# Analysis On 2022 League Pro Match Data
 
 ## Introduction
 
@@ -35,7 +35,7 @@ The resulting data frame above has no missing values; thus, my cleaning has been
 
 <br><br>
 
-###Let us move on to EDA:
+### Let us move on to EDA:
 
 <iframe
   src="assets/golddiff15.html"
