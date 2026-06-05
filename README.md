@@ -9,6 +9,7 @@ I required very little cleaning for my dataset. I mostly focused on filtering th
 
 <br><br>
 ### Slightly Filtered DataFrame
+
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength |   team kpm | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|-----------:|:-------|
 |            nan |          nan |          nan | LPL      |         nan |          nan |         1365 |     0.5714 | Blue   |
@@ -23,6 +24,7 @@ As you can see, there is still a lot more data missing, so I began searching for
 
 <br><br>
 ### Dropped LPL DataFrame
+
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|
 |           4757 |         1540 |            1 | LCK      |           4 |            1 |         2195 | Blue   |
@@ -94,6 +96,7 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 
 <br><br>
 ### Pivot Table Comparing The Relationship of golddiffat15 and gamelength Across Different Leagues
+
 | league   |   gamelength |   golddiffat15 |
 |:---------|-------------:|---------------:|
 | CBLOL    |      1974.09 |       41.572   |
