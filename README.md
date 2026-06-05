@@ -119,6 +119,13 @@ Below is the table I generated to observe the percentage of missing values acros
 | LEC      | 0.19301  |      0 |
 | LPL      | 0        |      1 |
 
+<iframe
+  src="assets/missingness-across-leagues.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 ## Hypothesis Testing
