@@ -15,7 +15,13 @@ As you can see, there is still a lot more data missing, so I began searching for
 
 The resulting data frame below has no missing values; thus, my cleaning has been finished.
 
-'|   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |   sqrt_deathsat15 |\n|---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|------------------:|\n|          -4757 |        -1540 |           -1 | LCK      |           1 |            4 |         2195 | Red    |           2       |\n|           1045 |          735 |           18 | LCK      |           4 |            2 |         2070 | Red    |           1.41421 |\n|          -1309 |          170 |           15 | LCK      |           1 |            3 |         2233 | Red    |           1.73205 |\n|           1698 |          523 |            5 | LCK      |           6 |            3 |         1506 | Red    |           1.73205 |\n|          -1461 |         -265 |           12 | LCK      |           2 |            3 |         2153 | Red    |           1.73205 |'
+|   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |   sqrt_deathsat15 |
+|---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|------------------:|
+|          -4757 |        -1540 |           -1 | LCK      |           1 |            4 |         2195 | Red    |           2       |
+|           1045 |          735 |           18 | LCK      |           4 |            2 |         2070 | Red    |           1.41421 |
+|          -1309 |          170 |           15 | LCK      |           1 |            3 |         2233 | Red    |           1.73205 |
+|           1698 |          523 |            5 | LCK      |           6 |            3 |         1506 | Red    |           1.73205 |
+|          -1461 |         -265 |           12 | LCK      |           2 |            3 |         2153 | Red    |           1.73205 |
 
 ## Assessment of Missingness
 
