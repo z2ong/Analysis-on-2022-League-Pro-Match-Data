@@ -1,7 +1,7 @@
 # Analysis On 2022 League Pro Match Data
 
 ## Introduction
-The dataset I am using for this project is 2022 esports match data from the website OraclesElixir. My project's main focus is: Can early-game metrics at the 15-minute mark predict the total duration of professional tier 1 League of Legends matches? I found this question semi-important because if you enjoy watching League of Legends pro matches, specifically tier 1, and you only want to view the games where your preferred team wins, you can utilize the 15-minute stats to glance ahead at whether you should watch the rest of the match or not. Or, you could convince your friends to bet you money at the 15-minute mark, and depending on how accurate this ML model is, you could use it to give yourself an edge. Aside from the trivial uses of this project, the whole dataset itself contains 150348 rows and 165 columns. The main columns I will be focusing on are golddiffat15, xpdiffat15, csdiffat15, killsat15, deathsat15, league, and gamelength, with a slight focus on the column side and position for further filtering of the dataframe. For reference, I only wanted to make predictions about teams, so I filtered the data frame to include only team data. golddiffat15 is the difference in gold between teams for those specific matches. They are identical in magnitude across games, but negative or positive depending on which team held the lead. xpdiffat15 is similar to that of golddiffat15, but instead of being a difference in gold between teams, it highlights the difference in experience level. csdiffat15 follows a similar trend, but highlights a difference in the creep score or the number of minions killed across the whole team. killsat15 highlights the number of kills a team made, while deathsat15 indicates the number of deaths they had. league is the different League of Legends regional organizations, where the matches were held. And finally, gamelength is just the duration of that particular match, which is identical between games. I should explain that when filtered to only have team data, each row indicates one team, and below or above it, the team they faced. There could be duplicate values between them, so as to avoid overinflating my model with similar values, I did some filtering between sides to get rid of duplicity.
+The dataset I am using for this project is 2022 esports match data from the website OraclesElixir. My project's main focus is: Can early-game metrics at the 15-minute mark predict the total duration of professional tier 1 League of Legends matches? I found this question semi-important because if you enjoy watching League of Legends pro matches, specifically tier 1, and you only want to view the game live but possibly have a commitment coming up, you can utilize the 15-minute stats to glance ahead at whether you have time to watch the rest of the match or not, getting a prediction instead of just guessing. Aside from the trivial uses of this project, the whole dataset itself contains 150348 rows and 165 columns. The main columns I will be focusing on are golddiffat15, xpdiffat15, csdiffat15, killsat15, deathsat15, league, and gamelength, with a slight focus on the column side and position for further filtering of the dataframe. For reference, I only wanted to make predictions about teams, so I filtered the data frame to include only team data. golddiffat15 is the difference in gold between teams for those specific matches. They are identical in magnitude across games, but negative or positive depending on which team held the lead. xpdiffat15 is similar to that of golddiffat15, but instead of being a difference in gold between teams, it highlights the difference in experience level. csdiffat15 follows a similar trend, but highlights a difference in the creep score or the number of minions killed across the whole team. killsat15 highlights the number of kills a team made, while deathsat15 indicates the number of deaths they had. league is the different League of Legends regional organizations, where the matches were held. And finally, gamelength is just the duration of that particular match, which is identical between games. I should explain that when filtered to only have team data, each row indicates one team, and below or above it, the team they faced. There could be duplicate values between them, so as to avoid overinflating my model with similar values, I did some filtering between sides to get rid of duplicity.
 
 
 ## Data Cleaning and Exploratory Data Analysis
@@ -90,16 +90,22 @@ I did the same thing above, by generating a histogram, but this time overlaying 
   frameborder="0"
 ></iframe>
 
+For this scatterplot, I wanted to note whether the trends with gamelength were linear or non-linear. This led me to choose a nonlinear model because of the data's shape.
+
 <br><br>
 
-<iframe
-  src="assets/relationship-gamelength-deathsat15.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+| league   |   gamelength |   golddiffat15 |
+|:---------|-------------:|---------------:|
+| CBLOL    |      1974.09 |       41.572   |
+| LCK      |      2020.06 |       -4.31906 |
+| LCS      |      1981.59 |      226.157   |
+| LEC      |      1993.26 |      318.465   |
+
+For the pivot table above, I was hoping to use it to analyze whether or not different trends occurred in different leagues, comparing the average gold difference at 15 minutes into the game and game length averages, but the pivot table doesn't necessarily show a direct trend between the two. While LCK does show that the less of a gold difference there is, the longer the game might take, the other leagues don't completely follow this pattern.
 
 ## Assessment of Missingness
+
+
 
 ## Hypothesis Testing
 
