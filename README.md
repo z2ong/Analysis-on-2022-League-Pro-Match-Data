@@ -13,7 +13,7 @@
 
 As you can see, there is still a lot more data missing, so I began searching for what I could possibly do to impute the missing data. As I verified it, I found that all of the missing data was only connected to the league LPL, meaning that the LPL was the only league that contained missing data in this data frame. Because of how much missingness there was across rows, I decided to drop rows that were from the LPL league. 
 
-The resulting data frame below has no missing values; thus, my cleaning has been mostly finished. Later, I realized that the diff stats every other row were duplicates of each other in magnitude, so as not to have such a 
+The resulting data frame below has no missing values; thus, my cleaning has been mostly finished. Later, I realized that the diff stats every other row were duplicates of each other in magnitude, so as not to have such redundant values in the model and overinflate it with values for double of one match, I decided to filter only to one side since the differentials would be equal in magnitude.
 
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|
