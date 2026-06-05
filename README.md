@@ -97,8 +97,6 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 <br><br>
 ### Pivot Table Comparing The Relationship of golddiffat15 and gamelength Across Different Leagues
 
-<br>
-
 | league   |   gamelength |   golddiffat15 |
 |:---------|-------------:|---------------:|
 | CBLOL    |      1974.09 |       41.572   |
@@ -117,6 +115,7 @@ In the original dataframe, I believed there were columns of data that were NMAR.
 
 Below is the table I generated to observe the percentage of missing values across different leagues.
 ### Leagues and Missingness
+
 | league   |    False |   True |
 |:---------|---------:|-------:|
 | CBLOL    | 0.19301  |      0 |
