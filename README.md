@@ -103,7 +103,21 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 
 For the pivot table above, I was hoping to use it to analyze whether or not different trends occurred in different leagues, comparing the average gold difference at 15 minutes into the game and game length averages. While I can't conclude a particular relationship, the LCK does show that the less of a gold difference there is, the longer the game might take. The other leagues also verify this, showing shorter game length averages with higher gold differences, but the trend doesn't appear to be linear.
 
+<br><br>
+
 ## Assessment of Missingness
+
+In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15, but it is important to note that many other columns shared the situation that golddiffat15 was under. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted the change when I had filtered to only include tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found only rows that were a part of LPL matches had missing values so I wanted to utilize this section to do more sleuthing. 
+
+Below is the table I generated to observe the percentage of missing values across different leagues.
+### Leagues and Missingness
+| league   |    False |   True |
+|:---------|---------:|-------:|
+| CBLOL    | 0.19301  |      0 |
+| LCK      | 0.370929 |      0 |
+| LCS      | 0.24305  |      0 |
+| LEC      | 0.19301  |      0 |
+| LPL      | 0        |      1 |
 
 
 
