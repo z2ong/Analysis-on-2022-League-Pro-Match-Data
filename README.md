@@ -131,7 +131,7 @@ Below is the table I generated to observe the percentage of missing values acros
   frameborder="0"
 ></iframe>
 
-
+Above is a histogram of missingness; all other leagues have no missingness, while LPL is completely missing all values for golddiffat15 specifically, but through other checks, I found it was similar for columns csdiffat15, xpdiffat15, killsat15, and deathsat15. I am only showing golddiffat15, since it was the column I used to check specifically for NMAR data.
 
 ## Hypothesis Testing
 
