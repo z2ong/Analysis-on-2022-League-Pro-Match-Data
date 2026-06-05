@@ -68,6 +68,8 @@ Above is another histogram, but this time we are highlighting the distribution o
   frameborder="0"
 ></iframe>
 
+Here, I wanted to observe the distribution of gamelength across leagues to note if there was a drastic difference that could highlight different metas. I want my model to be accurate to the individual metas of particular regions/leagues, so I made a box plot to compare the differences across distributions visually.
+
 <br><br>
 
 <iframe
@@ -76,6 +78,8 @@ Above is another histogram, but this time we are highlighting the distribution o
   height="600"
   frameborder="0"
 ></iframe>
+
+I did the same thing above, by generating a histogram, but this time overlaying the distributions on top of each other. While the boxplot highlighted the general trend, the histogram allowed me to note more subtle nuances, like how the LCK league's left skew did have considerable points, but it was more centered below 2000 seconds. I wanted to see if there was any visual difference so that I could confirm my hypothesis tests visually.
 
 <br><br>
 
