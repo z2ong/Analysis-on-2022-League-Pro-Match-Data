@@ -38,6 +38,21 @@ The resulting data frame above has no missing values; thus, my cleaning has been
   frameborder="0"
 ></iframe>
 
+<iframe
+  src="assets/deathsat15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/gamelength-boxplot"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
