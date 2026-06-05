@@ -46,12 +46,32 @@ The resulting data frame above has no missing values; thus, my cleaning has been
 ></iframe>
 
 <iframe
-  src="assets/gamelength-boxplot"
+  src="assets/gamelength-boxplot.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
+<iframe
+  src="assets/gamelength-across-leagues-histogram.html.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/relationship-gamelength-golddiffat15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/relationship-gamelength-deathsat15.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Assessment of Missingness
 
