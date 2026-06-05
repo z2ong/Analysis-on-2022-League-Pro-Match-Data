@@ -31,6 +31,9 @@ As you can see, there is still a lot more data missing, so I began searching for
 
 The resulting data frame above has no missing values; thus, my cleaning has been mostly finished. Later, I also realized that the diff stats every other row were duplicates of each other in magnitude, so as not to have such redundant values in the model and overinflate it with these particular values, I decided to filter only to one side per match since the differentials are equal in magnitude.
 
+Let us move onto EDA:
+
+
 <iframe
   src="assets/golddiff15.html"
   width="800"
@@ -38,12 +41,16 @@ The resulting data frame above has no missing values; thus, my cleaning has been
   frameborder="0"
 ></iframe>
 
+Above is a histogram highlighting the distribution of the golddiffat15 column. This histogram highlights that there is an approximately normal distribution for gold differences across many of the professional tier 1 games that occurred in 2022. This could indicate that at the 15-minute mark, most teams are equally balanced for the most part in terms of gold, with fewer cases of early leads. While we can't conclude exactly how long the game might take, this could be an indicator of early snowballing for particular matches, leading to faster wins/losses and shorter game times for the cases where golddiff is further from 0.
+
 <iframe
   src="assets/deathsat15.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+Above is another histogram, but this time we are highlighting the distribution of the deathsat15 column. This histogram shows a right-skewed pattern with most of the values centered around 2. There are no negative values for deaths since it's only starting from 0. It appears that, for the most part, teams on average have 2 deaths by the 15-minute mark, with some spanning upwards of 14. We might be able to venture that the games where there are upwards of 14 deaths within 15 minutes could indicate a faster-paced game, while the games with fewer deaths by the 15-minute mark could be slower. 
 
 <iframe
   src="assets/gamelength-boxplot.html"
