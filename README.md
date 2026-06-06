@@ -217,6 +217,8 @@ Random Forest Regressor fits T trees, bagging them using a random subset of feat
 
 To sum it all up, my final model obtained a mean train absolute error rate of about 246.754 seconds and a mean test absolute error rate of about 257.353 seconds. This performed better than my baseline model, at least a bit, highlighting that including these more subtle features of resource gain provides a more reliable prediction of game length.
 
+Overall, I would conclude that early-game metrics at the 15-minute mark somewhat accurately predict the total duration of professional tier 1 League of Legends matches, and that different league metas don't necessarily influence such game lengths, at least when accounting for early-game metrics such as golddiffat15, csdiffat15, xpdiffat15, killsat15, and deathsat15.
+
 <br><br><br>
 
 ## Fairness Analysis
