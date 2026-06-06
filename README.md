@@ -1,7 +1,9 @@
 # Analysis On 2022 League Pro Match Data
 
 ## Introduction
-The dataset I am using for this project is 2022 esports match data from the website OraclesElixir. My project's main focus is: ***Can early-game metrics at the 15-minute mark predict the total duration of professional tier 1 League of Legends matches, and do different league metas influence such game lengths?*** 
+The dataset I am using for this project is 2022 esports match data from the website OraclesElixir. 
+
+My project's main focus is: ***Can early-game metrics at the 15-minute mark predict the total duration of professional tier 1 League of Legends matches, and do different league metas influence such game lengths?*** 
 
 I found this question semi-important because if you enjoy watching League of Legends pro matches, specifically tier 1, and you only want to view the game live but possibly have a commitment coming up, you can utilize the 15-minute stats to glance ahead at whether you have time to watch the rest of the match or not, getting a prediction instead of just guessing. I wanted to be a bit more accurate in my prediction, so I assumed that different leagues, as they might have different playstyles, could have different game length distributions, and including them in my prediction might improve the generalizability of my model and improve prediction power. 
 
