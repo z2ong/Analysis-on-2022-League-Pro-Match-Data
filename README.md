@@ -130,6 +130,7 @@ For the pivot table above, I was hoping to use it to analyze whether or not diff
 In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15, but it is important to note that many other columns shared the situation that golddiffat15 was under. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted the change when I had filtered to only include tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found only rows that were a part of LPL matches had missing values so I wanted to utilize this section to do more sleuthing. 
 
 Below is the table I generated to observe the percentage of missing values across different leagues.
+
 ### Leagues and Missingness
 
 | league   |   False |   True |
@@ -151,6 +152,8 @@ Above is a histogram of missingness; all other leagues have no missingness, whil
 
 To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. This led me to conclude that there was significant evidence that the missingness of golddiffat15 is dependent on the variable league 
 
+<br><br><br>
+
 ## Hypothesis Testing
 
 For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power. Adding league as a predictor would still add to the model's predictive power if I did include it, but there would be more meaning to include it as a feature if, when I perform the permutation test, I reject the null and conclude that different leagues could have different game length distributions.
@@ -166,10 +169,18 @@ I am using the observed *mean absolute difference* in gamelength between LCK and
 
 When performing the hypothesis test, I obtained a *p-value = 0.034*. Since my p-value = 0.034 was greater than *a / 2 = 0.025*, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my future model to represent patterns between these leagues, but it can still be useful for improving my model's generalizability to nonlinear patterns between leagues and game length, at least in a smaller fashion.
 
+<br><br><br>
+
 ## Framing a Prediction Problem
+
+<br><br><br>
 
 ## Baseline Model
 
+<br><br><br>
+
 ## Final Model
+
+<br><br><br>
 
 ## Fairness Analysis
