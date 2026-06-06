@@ -163,6 +163,8 @@ For this section, I wanted to note if different leagues had different game lengt
 
 My null and alternative hypotheses were:
 
+<br>
+
 **H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
 
 **H_A: Is there a significant difference between the mean gamelength for LCK and LCS.**
@@ -226,6 +228,9 @@ Overall, I would conclude that early-game metrics at the 15-minute mark can some
 For performing the fairness assessment, I compared the leagues CBLOL and the LCS. When comparing their mean RMSE, they had the greatest difference so I thought to test them since they would probably be the best to determine how fair my model was. Since I have a regression model, I used RMSE as my evaluation metric.
 
 My null and alternative hypotheses were:
+
+<br>
+
 **H_0: My model is fair. Its root mean square error for the leagues CBLOL and LCS are roughly the same, and any differences are due to random chance.**
 
 **H_A: My model is unfair. Its root mean square error for the CBLOL is different than its root mean square error for the LCS match game length predictions.**
