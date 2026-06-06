@@ -141,7 +141,7 @@ To test if the missingness of golddiffat15 was independent of league, to see if 
   frameborder="0"
 ></iframe>
 
-Above is the empirical distribution of the permuted TVDs compared to the observed test statistic.
+Above is the empirical distribution of the permuted TVDs compared to the observed test statistic, highlighting the relationship between golddiffat15 missingness and league shuffled. Since the observed statistic is so far from the permuted data, we visually confirm that the missingness of golddiffat15 is not random, but is statistically dependent on the league variable.
 
 <br><br><br>
 
