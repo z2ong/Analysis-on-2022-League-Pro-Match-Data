@@ -134,6 +134,13 @@ In the original dataframe, I believed there were columns of data that were NMAR.
 
 To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. This led me to conclude that there was significant evidence that the missingness of golddiffat15 is dependent on the variable league.
 
+<iframe
+  src="assets/permuted-missingness.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 <br><br><br>
 
 ## Hypothesis Testing
