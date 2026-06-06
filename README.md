@@ -163,9 +163,9 @@ For this section, I wanted to note if different leagues had different game lengt
 ### For one of the permutation tests:
 
 My null and alternative hypotheses were:
->**H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
->
->**H_A: Is there a significant difference between the mean gamelength for LCK and LCS.**
+**H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
+
+**H_A: Is there a significant difference between the mean gamelength for LCK and LCS.**
 
 I am using the observed *mean absolute difference* in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my *a = 0.05* to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of *a / 2 = 0.025*.
 
@@ -226,9 +226,9 @@ Overall, I would conclude that early-game metrics at the 15-minute mark can some
 For performing the fairness assessment, I compared the leagues CBLOL and the LCS. When comparing their mean RMSE, they had the greatest difference so I thought to test them since they would probably be the best to determine how fair my model was. Since I have a regression model, I used RMSE as my evaluation metric.
 
 My null and alternative hypotheses were:
-**$H_0:$ My model is fair. Its root mean square error for the leagues CBLOL and LCS are roughly the same, and any differences are due to random chance.**
+**H_0: My model is fair. Its root mean square error for the leagues CBLOL and LCS are roughly the same, and any differences are due to random chance.**
 
-**$H_A:$ My model is unfair. Its root mean square error for the CBLOL is different than its root mean square error for the LCS match game length predictions.**
+**H_A: My model is unfair. Its root mean square error for the CBLOL is different than its root mean square error for the LCS match game length predictions.**
 
 My test statistic was the absolute difference in RMSE between the CBLOL and LCS leagues. I set my *a = 0.05* to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of *a / 2 = 0.025*.
 
