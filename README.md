@@ -44,7 +44,9 @@ As you can see, there is still a lot more data missing, so I began searching for
 
 <br>
 ### Dropped LPL DataFrame
+
 <br>
+
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|:-------|
 |           4757 |         1540 |            1 | LCK      |           4 |            1 |         2195 | Blue   |
@@ -117,7 +119,9 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 <br>
 
 ### Pivot Table Comparing The Relationship of golddiffat15 and gamelength Across Different Leagues
+
 <br>
+
 | league   |   gamelength |   golddiffat15 |
 |:---------|-------------:|---------------:|
 | CBLOL    |      1974.09 |       41.572   |
@@ -179,7 +183,9 @@ I restricted the features I utilized for prediction to data that was only availa
 ## Baseline Model
 
 I fit two baseline models. I wanted to see how including or excluding league as a predictor would fare for my baseline model. To pick my baseline predictors, I chose two features most correlated with gamelength.
+
 <br>
+
 |              |   golddiffat15 |   xpdiffat15 |   csdiffat15 |   killsat15 |   deathsat15 |   gamelength |
 |:-------------|---------------:|-------------:|-------------:|------------:|-------------:|-------------:|
 | golddiffat15 |     1          |    0.777251  |    0.611267  |    0.486282 |    -0.480762 |  -0.00037917 |
@@ -188,7 +194,9 @@ I fit two baseline models. I wanted to see how including or excluding league as 
 | killsat15    |     0.486282   |    0.423114  |    0.164557  |    1        |     0.244197 |  -0.156022   |
 | deathsat15   |    -0.480762   |   -0.452702  |   -0.152292  |    0.244197 |     1        |  -0.147307   |
 | gamelength   |    -0.00037917 |    0.0123029 |    0.0233446 |   -0.156022 |    -0.147307 |   1          |
+
 <br>
+
 In this case, the most correlated were killsat15 and deathsat15.
 
 For the first baseline model, I fit a default Random Forest Regressor model. I fit the **discrete quantitative** features killsat15 and deathsat15 as is. In doing so, I obtained a train mean absolute error rate of about 259.167 seconds and a test mean absolute error rate of about 260.404 seconds. This showed promise as the training and testing error rates were similar, indicating that I didn't necessarily overfit the model.
