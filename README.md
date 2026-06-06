@@ -142,11 +142,11 @@ For this section, I wanted to note if different leagues had different game lengt
 ### For one of the permutation tests I did:
 
 My null and alternative hypotheses were:
->H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.
+>**H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
 >
->H_A: Is there a significant difference between the mean gamelength for LCK and LCS.
->
->I am using the observed mean absolute difference in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my a = 0.05 to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of a / 2 = 0.025.
+>**H_A: Is there a significant difference between the mean gamelength for LCK and LCS.**
+
+I am using the observed mean absolute difference in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my a = 0.05 to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of a / 2 = 0.025.
 
 When performing the hypothesis test, I obtained a p-value = 0.034. Since my p-value = 0.034 was greater than a/2 = 0.025, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my future model, but it can still be useful for improving my model's generalizability to nonlinear patterns between regions and game length.
 
