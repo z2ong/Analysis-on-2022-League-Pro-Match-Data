@@ -16,6 +16,7 @@ Aside from the trivial uses of this project, the whole dataset itself contains 1
 
 I should explain that when filtered to only have team data, each row indicates one team, and below or above it, the team they faced during a specific match. There could be duplicate values between them, so as to avoid overinflating my model with similar values, I did some filtering utilizing the sides column to get rid of duplicity in future steps.
 
+<br><br><br>
 
 ## Data Cleaning and Exploratory Data Analysis
 I required very little cleaning for my dataset. I mostly focused on filtering the original dataframe for the information that I desired to work with. Since I wanted to focus specifically on tier 1 teams, I filtered the dataframe to only include data from the leagues LCK, LPL, CBLOL, LCS, and LEC. From there, I also only wanted the majority of game stats and overall team stats, so I filtered the dataframe further to only include team data as well. Beyond this, I filtered it down to the columns I wanted to analyze that I thought would answer my research question of predicting game length and if different leagues had differing game lengths based on regional metas, dependent on 15-minute stats.
