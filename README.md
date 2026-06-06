@@ -137,19 +137,17 @@ To test if the missingness of golddiffat15 was independent of league, to see if 
 
 ## Hypothesis Testing
 
-For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power.
+For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power. It would still add to the model's predictive power regardless of whether I did include it, but it has more meaning if, when I perform the permutation test, I reject the null.
 
-### For one of the hypothesis tests I did:
+### For one of the permutation tests I did:
 
 >H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.
 >
 >H_A: Is there a significant difference between the mean gamelength for LCK and LCS.
 >
->The test statistic I observed was the MAE, and my alpha = 0.05.
+>I am using the observed mean absolute difference in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my a = 0.05 to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of a / 2 = 0.025.
 
-When performing the hypothesis test, I obtained a p-value = 0.034.
-
-
+When performing the hypothesis test, I obtained a p-value = 0.034. Since my p-value = 0.034 was greater than a/2 = 0.025, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my model, but it can still be useful for improving my model's generalizability to nonlinear patterns between regions.
 
 ## Framing a Prediction Problem
 
