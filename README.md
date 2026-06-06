@@ -160,7 +160,7 @@ To test if the missingness of golddiffat15 was independent of league, to see if 
 
 For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power. Adding league as a predictor would still add to the model's predictive power if I did include it, but there would be more meaning to include it as a feature if, when I perform the permutation test, I reject the null and conclude that different leagues could have different game length distributions.
 
-### For one of the permutation tests I did:
+### For one of the permutation tests:
 
 My null and alternative hypotheses were:
 >**H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
