@@ -129,6 +129,7 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 | LCS      |      1981.59 |      226.157   |
 | LEC      |      1993.26 |      318.465   |
 
+<br>
 
 For the pivot table above, I was hoping to use it to analyze whether or not different trends occurred in different leagues, comparing the average gold difference at 15 minutes into the game and game length averages. While I can't conclude a particular relationship, the LCK does show that the less of a gold difference there is, the longer the game might take. The other leagues also verify this, showing shorter game length averages with higher gold differences, but the trend doesn't appear to be linear or very apparent.
 
