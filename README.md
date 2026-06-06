@@ -3,11 +3,12 @@
 ## Introduction
 The dataset I am using for this project is 2022 esports match data from the website OraclesElixir. 
 
-My project's main focus is: ***Can early-game metrics at the 15-minute mark somewhat accurately predict the total duration of professional tier 1 League of Legends matches, and do different league metas influence such game lengths?*** 
+My project's main focus is: ***Can early-game metrics at the 15-minute mark somewhat accurately predict the total duration of professional Tier 1 League of Legends matches, and do different league metas influence such game lengths?*** 
 
-I found this question semi-important because if you enjoy watching League of Legends pro matches, specifically tier 1, and you only want to view the game live but possibly have a commitment coming up, you can utilize the 15-minute stats to glance ahead at whether you have time to watch the rest of the match or not, getting a prediction instead of just guessing. I wanted to be a bit more accurate in my prediction, so I assumed that different leagues, as they might have different playstyles, could have different game length distributions, and including them in my prediction might improve the generalizability of my model and improve prediction power. 
+I found this question semi-important because if you enjoy watching League of Legends pro matches, specifically Tier 1, and you only want to view the game live but possibly have a commitment coming up, you can utilize the 15-minute stats to glance ahead at whether you have time to watch the rest of the match or not, getting a prediction instead of just guessing. I wanted to be a bit accurate in my prediction, so I wanted to verify if different leagues, as they might have different playstyles, could have different game length distributions. I thought that possibly including them in my prediction might improve the generalizability of my model and improve predictive power. 
 
 Aside from the trivial uses of this project, the whole dataset itself contains 150348 rows and 165 columns. The main columns I will be focusing on are golddiffat15, xpdiffat15, csdiffat15, killsat15, deathsat15, league, and gamelength, with a slight focus on the column side and position for further filtering of the dataframe. For reference, I only wanted to make predictions about teams, so I filtered the data frame to include only team data. 
+
 - golddiffat15: is the difference in gold between teams for those specific matches. They are identical in magnitude across the specific match, but negative or positive depending on which team held the lead.
 - xpdiffat15: is similar to that of golddiffat15, but instead of being a difference in gold between teams, it highlights the difference in experience level.
 - csdiffat15: follows a similar trend, but highlights a difference in the creep score or the number of minions killed across the whole team.
@@ -123,7 +124,7 @@ For this scatterplot, I wanted to note whether the trends with gamelength were l
 | LEC      |      1993.26 |      318.465   |
 
 
-For the pivot table above, I was hoping to use it to analyze whether or not different trends occurred in different leagues, comparing the average gold difference at 15 minutes into the game and game length averages. While I can't conclude a particular relationship, the LCK does show that the less of a gold difference there is, the longer the game might take. The other leagues also verify this, showing shorter game length averages with higher gold differences, but the trend doesn't appear to be linear.
+For the pivot table above, I was hoping to use it to analyze whether or not different trends occurred in different leagues, comparing the average gold difference at 15 minutes into the game and game length averages. While I can't conclude a particular relationship, the LCK does show that the less of a gold difference there is, the longer the game might take. The other leagues also verify this, showing shorter game length averages with higher gold differences, but the trend doesn't appear to be linear or very apparent.
 
 <br><br><br>
 
