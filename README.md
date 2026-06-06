@@ -209,7 +209,7 @@ With this newfound information, I concluded that different metas specific to dif
 
 ## Final Model
 
-
+For my final model, I added the features golddiffat15, xpdiffat15, and csdiffat15 and engineered them to obtain the magnitudes instead of their original differences. While the direction could matter for other models, I believed it didn't directly impact mine since the magnitude of the leads in a match is what influences a game's length. Plus, the model could have viewed a negative or positive value differently, even though they are fundamentally the same, as I only cared how one-sided these particular stats were. These values weren't highly correlated with gamelength, and were even somewhat correlated with the previous predictors of my baseline model; however, I believed that including them would provide a more holistic prediction of the game state at 15 minutes and capture nuances that a model purely containing the features deathsat15 and killsat15 didn't. In the actual game of League of Legends, small leads in resources, calculated by the values of cs, gold, and xp, can determine wins or losses, emphasizing how much of a lead one team would have over another, thus influencing the game duration. For this subtle reasoning alone, I believed that including these predictors might decrease the final model's mean absolute error rate, at least by a small amount, if any at all.
 
 <br><br><br>
 
