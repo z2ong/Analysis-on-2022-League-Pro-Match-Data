@@ -144,6 +144,12 @@ For this section, I wanted to note if different leagues had different game lengt
 >H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.
 >
 >H_A: Is there a significant difference between the mean gamelength for LCK and LCS.
+>
+>The test statistic I observed was the MAE, and my alpha = 0.05.
+
+When performing the hypothesis test, I obtained a p-value = 0.034.
+
+
 
 ## Framing a Prediction Problem
 
