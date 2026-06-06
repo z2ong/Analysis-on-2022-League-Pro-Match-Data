@@ -159,18 +159,17 @@ To test if the missingness of golddiffat15 was independent of league, to see if 
 
 ## Hypothesis Testing
 
-For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power. Adding league as a predictor would still add to the model's predictive power if I did include it, but there would be more meaning to include it as a feature if, when I perform the permutation test, I reject the null and conclude that different leagues could have different game length distributions.
-
-### For one of the permutation tests:
+For this section, I wanted to note if different leagues had different game length distributions. This would mean, if I rejected the null, that including the league as a possible predictor would give my model a bit more predictive power. Adding league as a predictor could still add to the model's predictive power if I did include it, but there would be more meaning to include it as a feature if, when I perform the permutation test, I found that I reject the null and conclude that different leagues could have different game length distributions.
 
 My null and alternative hypotheses were:
+
 **H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.**
 
 **H_A: Is there a significant difference between the mean gamelength for LCK and LCS.**
 
 I am using the observed *mean absolute difference* in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my *a = 0.05* to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of *a / 2 = 0.025*.
 
-When performing the hypothesis test, I obtained a *p-value = 0.034*. Since my p-value = 0.034 was greater than *a / 2 = 0.025*, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my future model to represent patterns between these leagues, but I wanted to attempt to try it to see if it would still be useful for improving my model's generalizability to nonlinear patterns between leagues and game length, at least in a smaller fashion.
+When performing the hypothesis test, I obtained a *p-value = 0.034*. Since my p-value = 0.034 was greater than *a / 2 = 0.025*, I didn't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signaled that the predictor league might not be a very powerful feature in my future model to represent patterns between these leagues, but I wanted to attempt to try it to see if it would still be useful for improving my model's generalizability to nonlinear patterns between leagues and game length, at least in a smaller fashion.
 
 <br><br><br>
 
@@ -181,13 +180,13 @@ My prediction problem is:
 
 This is a regression problem, as I am trying to predict the continuous numerical value of game length (seconds). My response variable is gamelength, which I thought was a good metric, as I want to predict how long a game might take. The metric I am choosing to evaluate my model is mean absolute error. I chose this metric because I figured there would be really large disparities in game lengths, and rather than penalizing outliers, by using a metric like residual mean squared error, which squares the error, I wanted to preserve my model's generalizability to ensure predictive accuracy across game durations.
 
-I restricted the features I utilized for prediction to data that was only available within the first 15 minutes of the game and excluded features like damage per minute or team kills per minute, which would be calculated after the match and could have unintended data leakage concerning information not available within the first 15 minutes of the game. To add to this, I also included data from the red-sided team, since features like xpdiffat15, golddiffat15, and csdiffat15 would have redundant observations across the same match, as the two teams would be equal in magnitude for these values. I also thought that since one team's kill stat and the other team's death stat would be equal, it would be redundant to include both. And finally, the gamelength and league would be identical for each match as well, so I believed that overall, only including one side in the model wouldn't be harmful to my model's predictive power.  
+I restricted the features I utilized for prediction to data that was only available within the first 15 minutes of the game and excluded features like damage per minute or team kills per minute, which would be calculated after the match and could have unintended data leakage concerning information not available within the first 15 minutes of the game. To add to this, I filtered the dataset to only include data from the red-sided teams, since features like xpdiffat15, golddiffat15, and csdiffat15 would have redundant observations across the same match, as the two teams would be equal in magnitude for these values. I also thought that since one team's kill stat and the other team's death stat would be equal, it would be redundant to include both as well. And finally, the gamelength and league would be identical for each match, so I believed that overall, only including one side, red or blue, in the model wouldn't be harmful to my model's predictive power.  
 
 <br><br><br>
 
 ## Baseline Model
 
-I fit two baseline models. I wanted to see how including or excluding league as a predictor would fare for my baseline model. To pick my baseline predictors, I chose the features most correlated with gamelength.
+I fit two baseline models. I wanted to see how including or excluding league as a predictor would fare for my baseline model. To pick my baseline predictors, I chose two features most correlated with gamelength.
 
 |              |   golddiffat15 |   xpdiffat15 |   csdiffat15 |   killsat15 |   deathsat15 |   gamelength |
 |:-------------|---------------:|-------------:|-------------:|------------:|-------------:|-------------:|
@@ -204,7 +203,7 @@ For the first baseline model, I fit a default Random Forest Regressor model. I f
 
 For the second baseline model, I fit another default Random Forest Regressor model. This time, I fit the **discrete qualitative** features killsat15 and deathsat15 as is, but fit the **nominal qualitative** feature league using one-hot encoding. For this model, I obtained a train mean absolute error rate of about 234.875 seconds and a test mean absolute error rate of about 283.649 seconds. This increase in test error, but decrease in training error, showed beginning signs of overfitting my training data, thus leading me to believe that including league as a feature would do more harm to my final predictive model than good.
 
-With this newfound information, I concluded that different metas specific to differing leagues don't necessarily help in predicting game length. Thus leading me to exclude the feature league from my final model.
+With this newfound information, I concluded that noting the differing leagues doesn't necessarily help in predicting game length for my model, thus leading me to exclude the feature league from my final model.
 
 <br><br><br>
 
