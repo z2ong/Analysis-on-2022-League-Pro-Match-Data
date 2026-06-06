@@ -201,13 +201,15 @@ In this case, the most correlated were killsat15 and deathsat15.
 
 For the first baseline model, I fit a default Random Forest Regressor model. I fit the features killsat15 and deathsat15 as is. In doing so, I obtained a train mean absolute error rate of about 259.167 seconds and a test mean absolute error rate of about 260.404 seconds. This showed promise as the training and testing error rates were similar, indicating that I didn't necessarily overfit the model.
 
-For the second baseline model, I fit another default Random Forest Regressor model. This time, I fit the features killsat15 and deathsat15 as is, but fit the feature league using one-hot encoding. For this model, I obtained a train mean absolute error rate of about 234.875 seconds and a test mean absolute error rate of about 283.649 seconds. This increase in test error, but decrease in training error, showed beginning signs of overfitting the data to my training data, thus leading me to believe that including league as a feature would do more harm to my model than good.
+For the second baseline model, I fit another default Random Forest Regressor model. This time, I fit the features killsat15 and deathsat15 as is, but fit the feature league using one-hot encoding. For this model, I obtained a train mean absolute error rate of about 234.875 seconds and a test mean absolute error rate of about 283.649 seconds. This increase in test error, but decrease in training error, showed beginning signs of overfitting my training data, thus leading me to believe that including league as a feature would do more harm to my final predictive model than good.
 
-With this newfound information, I concluded that different metas specific to leagues don't necessarily help in predicting game length. Thus leading me to exclude the feature league from my final model.
+With this newfound information, I concluded that different metas specific to differing leagues don't necessarily help in predicting game length. Thus leading me to exclude the feature league from my final model.
 
 <br><br><br>
 
 ## Final Model
+
+
 
 <br><br><br>
 
