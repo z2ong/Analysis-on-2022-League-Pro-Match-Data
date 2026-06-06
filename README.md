@@ -130,9 +130,9 @@ For the pivot table above, I was hoping to use it to analyze whether or not diff
 
 ## Assessment of Missingness
 
-In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15, but it is important to note that many other columns shared the situation that golddiffat15 was under. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted the change when I had filtered to only include Tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found that only rows that were a part of LPL matches had missing values, so I wanted to utilize this section to do more sleuthing. 
+In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15. I thought that it was not NMAR. It is important to note that not all other columns were similar to golddiffat15, but the ones specific to my prediction problem were. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted an abrupt wall of NAN values when I had filtered to only include Tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found that only rows that were a part of LPL matches had missing values, so I wanted to utilize this section to verify my thoughts. 
 
-To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. This led me to conclude that there was significant evidence that the missingness of golddiffat15 is dependent on the variable league.
+To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. Since my p-value was less than the a = 0.05, I had enough evidence to conclude that the missingness of golddiffat15 was dependent on the variable league. This means that the data golddiffat15 is MAR and not NMAR.
 
 <iframe
   src="assets/permuted-missingness.html"
@@ -140,6 +140,8 @@ To test if the missingness of golddiffat15 was independent of league, to see if 
   height="600"
   frameborder="0"
 ></iframe>
+
+Above is the empirical distribution of the permuted TVDs compared to the observed test statistic.
 
 <br><br><br>
 
