@@ -27,7 +27,9 @@ I required very little cleaning for my dataset. I mostly focused on filtering th
 <br>
 
 ### Slightly Filtered DataFrame
+
 <br>
+
 |   golddiffat15 |   xpdiffat15 |   csdiffat15 | league   |   killsat15 |   deathsat15 |   gamelength |   team kpm | side   |
 |---------------:|-------------:|-------------:|:---------|------------:|-------------:|-------------:|-----------:|:-------|
 |            nan |          nan |          nan | LPL      |         nan |          nan |         1365 |     0.5714 | Blue   |
