@@ -110,6 +110,7 @@ I did the same thing above, by generating a histogram, but this time overlaying 
 For this scatterplot, I wanted to note whether the trends with gamelength were linear or non-linear. This led me to choose a nonlinear model because of the data's shape.
 
 <br>
+
 ### Pivot Table Comparing The Relationship of golddiffat15 and gamelength Across Different Leagues
 
 | league   |   gamelength |   golddiffat15 |
