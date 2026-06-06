@@ -169,7 +169,7 @@ My null and alternative hypotheses were:
 
 I am using the observed *mean absolute difference* in gamelength between LCK and LCS to determine whether my null or alternative hypothesis is true. I set my *a = 0.05* to ensure 95% confidence, but as this is a two-tailed test, I used a threshold of *a / 2 = 0.025*.
 
-When performing the hypothesis test, I obtained a *p-value = 0.034*. Since my p-value = 0.034 was greater than *a / 2 = 0.025*, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my future model to represent patterns between these leagues, but it can still be useful for improving my model's generalizability to nonlinear patterns between leagues and game length, at least in a smaller fashion.
+When performing the hypothesis test, I obtained a *p-value = 0.034*. Since my p-value = 0.034 was greater than *a / 2 = 0.025*, I don't have enough evidence to conclude that there is a difference in the mean game length between LCK and LCS matches. This signals that the predictor league might not be a very powerful feature in my future model to represent patterns between these leagues, but I wanted to attempt to try it to see if it would still be useful for improving my model's generalizability to nonlinear patterns between leagues and game length, at least in a smaller fashion.
 
 <br><br><br>
 
@@ -185,6 +185,25 @@ I restricted the features I utilized for prediction to data that was only availa
 <br><br><br>
 
 ## Baseline Model
+
+I fit two baseline models. I wanted to see how including or excluding league as a predictor would fare for my baseline model. To pick my baseline predictors, I chose the features most correlated with gamelength.
+
+|              |   golddiffat15 |   xpdiffat15 |   csdiffat15 |   killsat15 |   deathsat15 |   gamelength |
+|:-------------|---------------:|-------------:|-------------:|------------:|-------------:|-------------:|
+| golddiffat15 |     1          |    0.777251  |    0.611267  |    0.486282 |    -0.480762 |  -0.00037917 |
+| xpdiffat15   |     0.777251   |    1         |    0.666589  |    0.423114 |    -0.452702 |   0.0123029  |
+| csdiffat15   |     0.611267   |    0.666589  |    1         |    0.164557 |    -0.152292 |   0.0233446  |
+| killsat15    |     0.486282   |    0.423114  |    0.164557  |    1        |     0.244197 |  -0.156022   |
+| deathsat15   |    -0.480762   |   -0.452702  |   -0.152292  |    0.244197 |     1        |  -0.147307   |
+| gamelength   |    -0.00037917 |    0.0123029 |    0.0233446 |   -0.156022 |    -0.147307 |   1          |
+
+In this case, the most correlated were killsat15 and deathsat15.
+
+For the first baseline model, I fit a default Random Forest Regressor model. I fit the features killsat15 and deathsat15 as is. In doing so, I obtained a train mean absolute error rate of about 259.167 seconds and a test mean absolute error rate of about 260.404 seconds. This showed promise as the training and testing error rates were similar, indicating that I didn't necessarily overfit the model.
+
+For the second baseline model, I fit another default Random Forest Regressor model. This time, I fit the features killsat15 and deathsat15 as is, but fit the feature league using one-hot encoding. For this model, I obtained a train mean absolute error rate of about 234.875 seconds and a test mean absolute error rate of about 283.649 seconds. This increase in test error, but decrease in training error, showed beginning signs of overfitting the data to my training data, thus leading me to believe that including league as a feature would do more harm to my model than good.
+
+With this newfound information, I concluded that different metas specific to leagues don't necessarily help in predicting game length. Thus leading me to exclude the feature league from my final model.
 
 <br><br><br>
 
