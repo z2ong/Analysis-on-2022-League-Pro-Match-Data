@@ -141,6 +141,7 @@ For this section, I wanted to note if different leagues had different game lengt
 
 ### For one of the permutation tests I did:
 
+My null and alternative hypotheses were:
 >H_0: Is the distribution of gamelength for LCK the same as the distribution of gamelength for LCS.
 >
 >H_A: Is there a significant difference between the mean gamelength for LCK and LCS.
