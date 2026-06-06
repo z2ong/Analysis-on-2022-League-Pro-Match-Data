@@ -130,30 +130,9 @@ For the pivot table above, I was hoping to use it to analyze whether or not diff
 
 ## Assessment of Missingness
 
-In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15, but it is important to note that many other columns shared the situation that golddiffat15 was under. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted the change when I had filtered to only include tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found only rows that were a part of LPL matches had missing values so I wanted to utilize this section to do more sleuthing. 
+In the original dataframe, I believed there were columns of data that were NMAR. Specific to this assessment, however, I will only be analyzing golddiffat15, but it is important to note that many other columns shared the situation that golddiffat15 was under. As I was enacting EDA on the dataset, I noticed that there were rows and rows of NaN values. To sleuth, I first thought to compare leagues, as I had noted the change when I had filtered to only include Tier 1 leagues. I looped through the columns I wanted to work with, checking which league had missingness. I found that only rows that were a part of LPL matches had missing values, so I wanted to utilize this section to do more sleuthing. 
 
-Below is the table I generated to observe the percentage of missing values across different leagues.
-
-### Leagues and Missingness
-
-| league   |   False |   True |
-|:---------|--------:|-------:|
-| CBLOL    |       1 |      0 |
-| LCK      |       1 |      0 |
-| LCS      |       1 |      0 |
-| LEC      |       1 |      0 |
-| LPL      |       0 |      1 |
-
-<iframe
-  src="assets/missingness-across-leagues.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
-
-Above is a histogram of missingness; all other leagues have no missingness, while LPL is completely missing all values for golddiffat15 specifically, but through other checks, I found it was similar for columns csdiffat15, xpdiffat15, killsat15, and deathsat15. I am only showing golddiffat15, since it was the column I used to check specifically for NMAR data.
-
-To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. This led me to conclude that there was significant evidence that the missingness of golddiffat15 is dependent on the variable league 
+To test if the missingness of golddiffat15 was independent of league, to see if the data really was NMAR or MAR, I did a permutation test comparing the missing values of golddiffat15 with the categories of league. Through the test, I obtained a p-value < 0.001. This led me to conclude that there was significant evidence that the missingness of golddiffat15 is dependent on the variable league.
 
 <br><br><br>
 
